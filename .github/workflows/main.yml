@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      SERVICE: diabetes_Unit_Converter_Services # TODO: update Cloud Run service name
+      SERVICE: diabetes_unit_converter_services # TODO: update Cloud Run service name
     steps:
   
       - uses: actions/checkout@v2
