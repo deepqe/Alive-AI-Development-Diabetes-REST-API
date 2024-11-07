@@ -89,6 +89,7 @@ class UnitConverterAPI:
                 logging.warning("Request Authentication Failed.")
                 return jsonify({
                     "success": False,
+                    "data": {},
                     "message": "Authentication Failed."
                 }), 403
 
