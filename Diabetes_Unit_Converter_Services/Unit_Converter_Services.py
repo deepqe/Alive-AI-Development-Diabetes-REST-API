@@ -123,6 +123,7 @@ class UnitConverterAPI:
             logging.error('An Error Occurred while Converting Units: ', exc_info=e)
             return jsonify({
                 "success": False,
+                "data": {},
                 "message": "Failed to Convert Units"
             }), 500
 
