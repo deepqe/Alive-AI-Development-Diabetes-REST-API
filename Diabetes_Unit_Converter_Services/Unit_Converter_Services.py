@@ -92,6 +92,7 @@ class UnitConverterAPI:
                     "message": "Authentication Failed."
                 }), 403
 
+            request_data = request_data["data"]
             converted_data = {
                 "Age": request_data["Age"],
                 "Gender": request_data["Gender"],
