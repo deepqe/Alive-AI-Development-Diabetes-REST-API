@@ -216,7 +216,7 @@ jobs:
         if: steps.filter.outputs.Diabetes_Predictor_Services == 'true'
         run: |-
           gcloud auth configure-docker us-central1-docker.pkg.dev
-          docker build --build-arg APP_DIR=Cholesterol_Level_Prediction_Services --build-arg SERVICE_NAME=Cholesterol_Level_Services -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPO }}/${{ env.SERVICE }}:${{ github.sha }}" ./
+          docker build --build-arg APP_DIR=Diabetes_Predictor_Services --build-arg SERVICE_NAME=Diabetes_Predictor -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPO }}/${{ env.SERVICE }}:${{ github.sha }}" ./
           docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPO }}/${{ env.SERVICE }}:${{ github.sha }}"
 
       # END - Docker auth and build
